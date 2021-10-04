@@ -1,0 +1,1 @@
+sudo docker build -t reducto-badges . && sudo docker run --name reducto-badges reducto-badges
