@@ -116,23 +116,23 @@ async def read_report(file_path: str) -> Dict:
         return report[package_name]
 
 
-@app.get("/report/{file_path:path}")
-async def read_file(file_path: str):
-    """Function to read a file (expected to be at the same level of this very file.
-
-    TODO:
-        Create a sample file for testing purposes.
-
-    Parameters
-    ----------
-    file_path : str
-        Name of the file. As expected in relative, should be the only info necessary.
-
-    Examples
-    --------
-    http://127.0.0.1:8000/report/reducto_report.json
-    """
-    return await read_report(file_path)
+# @app.get("/report/{file_path:path}")
+# async def read_file(file_path: str):
+#     """Function to read a file (expected to be at the same level of this very file.
+#
+#     TODO:
+#         Create a sample file for testing purposes.
+#
+#     Parameters
+#     ----------
+#     file_path : str
+#         Name of the file. As expected in relative, should be the only info necessary.
+#
+#     Examples
+#     --------
+#     http://127.0.0.1:8000/report/reducto_report.json
+#     """
+#     return await read_report(file_path)
 
 
 def generate_url(variable: str, report: Dict) -> str:
