@@ -1,21 +1,41 @@
 # reducto-badge-service
 Service to generate shields.io badges for reducto reports
 
-![badge](http://127.0.0.1:8000/sample_badge)
+Sample badges, by passing the reducto report at the root of the package, and passing the 
+name of the variable wanted:
 
-#![test](http://0.0.0.0:8080/badge/reducto_report.json)
+---
 
-#![test2](http://0.0.0.0:8080/badge/home/agustin/github_repos/reducto-badge-service/reducto_report.json)
+![badge](https://reducto-badge-service.herokuapp.com/badge/reducto_report.json)
 
-#![test1](http://127.0.0.1:8000/badge/reducto_report.json)
+![badge](https://reducto-badge-service.herokuapp.com/badge/reducto_report.json?variable=source_lines)
 
-#![test1](http://127.0.0.1:8000/badge/reducto_report.json?variable=average_function_length)
+![badge](https://reducto-badge-service.herokuapp.com/badge/reducto_report.json?variable=blank_lines)
+
+![badge](https://reducto-badge-service.herokuapp.com/badge/reducto_report.json?variable=comment_lines)
+
+![badge](https://reducto-badge-service.herokuapp.com/badge/reducto_report.json?variable=docstring_lines)
+
+![badge](https://reducto-badge-service.herokuapp.com/badge/reducto_report.json?variable=average_function_length)
+
+![badge](https://reducto-badge-service.herokuapp.com/badge/reducto_report.json?variable=number_of_functions)
+
+![badge](https://reducto-badge-service.herokuapp.com/badge/reducto_report.json?variable=source_files)
+---
+
+#### Api docs from FastApi
+
+Open [api docs](https://reducto-badge-service.herokuapp.com/docs)
 
 ## Run locally
 
     uvicorn main:app
 
-#### From Dockerfile
+To test the badge locally:
+#![test](http://127.0.0.1:8000/badge/reducto_report.json?variable=average_function_length)
+
+
+## From Dockerfile
 
 To deploy from a Docker container:
 
@@ -40,6 +60,3 @@ Generates the following
 - Deploy to heroku:
 
     `git push heroku main`
-    
-    `heroku open`
-
