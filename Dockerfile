@@ -11,4 +11,4 @@ RUN pip install -r requirements.txt
 
 COPY ./main.py main.py
 
-CMD ["uvicorn", "main:app", "--reload"]
+CMD ["uvicorn", "main:app"]
